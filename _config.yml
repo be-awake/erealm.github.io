@@ -21,7 +21,13 @@ author:
   weibo: erealm2014
   bio: SOLVING YOUR PROBLEMS BY MAKING YOUR OWN SOFTWARE!
   email_md5: d7500acdff95da1b6a98acac373cae8b
-
+writer:
+  matt:
+    display_name: Matt Hackett
+    gravatar: 60fd5218fff6927c0ed376cce01c5460
+    email: matt@lostdecadegames.com
+    weibo: richtaur
+    github: richtaur
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
