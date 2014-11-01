@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello World!
+author: don
 categories: [general, setup, demo]
 tags: [demo, dbyll, dbtek, setup]
 fullview: true

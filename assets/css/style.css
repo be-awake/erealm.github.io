@@ -71,6 +71,24 @@ article .share a:hover {
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
 
+.post-header h1,.post-header h2 {
+	float: left;
+	margin-right: 40px;
+}
+
+.post-header .meta {
+	float: left;
+	background: rgba(0,0,0,0.1);
+	margin-top: 30px;
+	text-align: center;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.post-header .meta img {
+	width: 40px;
+	height: 40px;
+}
+
 article{
 	margin-bottom: 40px;
 }
