@@ -21,12 +21,12 @@ tagline:
   </span>
 
   <div class="post-header clearfix">
+    <div class="meta" data-toggle="tooltip" data-placement="bottom" data-original-title="{{author.display_name}}">
+      <img alt="{{ author.display_name }}" src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+    </div>
     <h2>
       <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
     </h2>
-    <div class="meta" data-toggle="tooltip" data-placement="right" data-original-title="{{author.display_name}}">
-      <img alt="{{ author.display_name }}" src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
-    </div>
   </div>
   <div>
     {% if post.fullview %}
