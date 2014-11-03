@@ -84,8 +84,9 @@ fullview: false
 　　基于post协议进行路由的分发时，其参数的传递不同于get协议中的字符串拼接，而是单独作为参数进行传递的。
 
     submitMessage: function(name, email, message) {
-            return $http.post('/app/message', {name: name, email:email, message: message});
-        },
+        return $http.post('/app/message', {name: name, email:email, message: message});
+    }
+
 　　上面代码在客户端post了name,email,messsage三条数据，封装为Json格式后通过URL：/app/message将参数post给后端。Routes.js在匹配到URL：:/app/message后，将其路由到support.js接口，在该接口中再通过req.body获取传过来的参数。
  
     var name = req.body.name,
