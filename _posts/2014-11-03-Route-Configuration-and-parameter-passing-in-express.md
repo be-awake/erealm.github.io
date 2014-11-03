@@ -10,6 +10,7 @@ fullview: false
 　　在开发公司HomeSite网站（*官网：[www.erealm.cn](http://www.erealm.cn)*）时，采用的是最近流行的全Javascript的web开发架构MEAN，分别代表的是(M)ongoDB——使用JSON风格来存储数据，使用JS来进行sql查询；(E)xpress——基于Node的Web开发框架；(A)agular——JS的前端开发框架；(N)ode.js——基于V8的运行时环境。
     
 　　在处理后端逻辑时，用到了基于Node.js的MVC开发框架express，而express又有着其特有的语法特性。本文就在开发HomeSite过程中用到的express中关于route的配置进行基本的语法讲解，旨在为开发的过程做一个梳理和总结。
+
 ###一、路由的配置
 　　在express框架中，根目录下的app.js文件时程序的入口文件，当用户在浏览器输入网址后，程序会执行app.js文件来对程序进行模板引擎设置，路由设置和监听程序端口等。因为在该程序中有大量的路由来实现界面跳转和请求数据，将这些路由都写在app.js文件中未免显得太冗余不好维护，因此将所有的路由写在一个专门的路由配置文件routes.js中。在app.js中用express提供的require函数，取得routes.js文件的模块导出对象，并将变量app作为参数传递给该对象，从而实现了路由的功能。
 　　
