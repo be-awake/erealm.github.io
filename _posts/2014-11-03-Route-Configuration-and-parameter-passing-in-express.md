@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Express中Route的配置及参数传递
-author:zhang
+author: zhang
 categories: [home]
 tags: [路由,参数,设置,express]
 fullview: false
