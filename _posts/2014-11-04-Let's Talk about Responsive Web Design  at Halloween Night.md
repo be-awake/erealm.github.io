@@ -96,6 +96,7 @@ fullview: false
 &emsp;&emsp;这行样式代码在响应式设计中很重要，它用于隐藏某块内容。
 
 ![图3](http://i.imgur.com/AWcZfns.png)
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
 
 ![图4](http://i.imgur.com/rjKmy8Q.png)
 
