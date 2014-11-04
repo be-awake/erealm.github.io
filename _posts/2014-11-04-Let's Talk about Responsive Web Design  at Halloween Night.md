@@ -17,9 +17,6 @@ fullview: false
 
 ![图1](http://i.imgur.com/bE2cEb8.png)
 
-  
-![图2](http://i.imgur.com/SCBZw2T.png)
- 
 **（1）**.	响应式设计要做的第一件事情就是在head标签里指定viewport meta 属性。
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
