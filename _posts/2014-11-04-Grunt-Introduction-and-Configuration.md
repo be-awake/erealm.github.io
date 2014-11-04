@@ -119,7 +119,7 @@ fullview: false
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **图 2**
        
 ###3.Gruntfile.js 文件   
-(1)**Gruntfile.js**文件位置及作用
+(1)**Gruntfile.js**文件位置及作用    
 &emsp;&emsp; **Gruntfile.js** 文件是有效的 **JavaScript** 文件，放在项网站目根目录中，和 **package.json** 文件在同一目录层级，并和项目源码一起加入源码管理器。 **Gruntfile.js** 文件用于读取 **package** 信息、插件加载、注册任务和运行任务。
 (2)**Gruntfile.js**由以下几部分构成：      
 a.**"wrapper"** 函数   
