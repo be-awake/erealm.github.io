@@ -7,7 +7,7 @@ tags: [Grunt,自动化,package,gruntfile,压缩,合并,配置,插件]
 fullview: false
 ---
 
-&emsp;&emsp;网站的建立让我逐步学习到以前从未接触过的技术也，学会很多，这里就简单谈谈网站构建时**Grunt**自动化工具的使用心得。随着网站的开发进行，慢慢认识到**Grunt**就是一个能在开发中精简流程、提高效率、减少错误率的自动化工具。它能有效的简化庞大复杂系统的维护、打包、发布等流程，从而节省时间。
+&emsp;&emsp;网站的建立让我逐步学习到以前从未接触过的技术，这里就简单谈谈网站构建时**Grunt**自动化工具的使用心得。随着网站的开发进行，慢慢认识到**Grunt**就是一个能在开发中精简流程、提高效率、减少错误率的自动化工具。它能有效的简化庞大复杂系统的维护、打包、发布等流程，从而节省时间。
 
 &emsp;&emsp;**Grunt**一个基于**Node.js**的命令行的前端 **Javascript** 自动化构建工具。是帮助开发者完成大部分重复性工作的有效工具。例如：    
  &emsp;&emsp;- 压缩文件   
@@ -127,7 +127,8 @@ fullview: false
               
 ###3.Gruntfile.js 文件   
 (1)**Gruntfile.js**文件位置及作用    
-&emsp;&emsp; **Gruntfile.js** 文件是有效的 **JavaScript** 文件，放在项网站目根目录中，和 **package.json** 文件在同一目录层级，并和项目源码一起加入源码管理器。 **Gruntfile.js** 文件用于读取 **package** 信息、插件加载、注册任务和运行任务。    
+&emsp;&emsp; **Gruntfile.js** 文件是有效的 **JavaScript** 文件，放在项网站根目录中，和 **package.json** 文件在同一目录层级，并和项目源码一起加入源码管理器。 **Gruntfile.js** 文件用于读取 **package** 信息、插件加载、注册任务和运行任务。   
+
 (2)**Gruntfile.js**由以下几部分构成：  
     
 a.**"wrapper"** 函数   
@@ -151,7 +152,7 @@ a.**"wrapper"** 函数
         }
 
 &emsp;&emsp;每一份**Gruntfile** 和 **grunt插件**都遵循同样的格式，所有的Grunt代码必须放在此函数内。   
-&emsp;&emsp;项目的元数据是从 **package.json** 文件中导入到 **Grunt配置** 中的， **grunt.file.readJSON** 方法用于引入 **JSON** 数据。 **grunt-contrib-uglify** 插件中的 **uglify** 任务被配置用于压缩一个源文件以及使用该元数据动态的生成一个 **banner** 注释。见以上代码。   
+&emsp;&emsp;项目的元数据是从 **package.json** 文件中导入到 **Grunt配置** 中的， **grunt.file.readJSON** 方法用于引入 **JSON** 数据。 **grunt-contrib-uglify** 插件中的 **uglify** 任务被配置用于压缩一个源文件以及使用该元数据动态的生成一个 **banner** 注释。见以下代码。   
 
 b.项目与任务配置   
 &emsp;&emsp;如以上 **wrapper** 函数， **Grunt** 任务都依赖某些配置数据，这些数据被定义在一个 **object** 内，并传递给 **grunt.initConfig** 方法。 **grunt.file.readJSON('package.json')** 将存储在 **package.json** 文件中的 **JSON** 元数据引入到 **grunt config** 中。由于 **Gruntfile.js** 是 **javascript** 文件，所以配置信息不只是 **JSON** 格式，这里也可以使用有效的js代码。   
