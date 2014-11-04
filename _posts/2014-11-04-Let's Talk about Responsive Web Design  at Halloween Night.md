@@ -18,7 +18,7 @@ fullview: false
 **（1）**.	响应式设计要做的第一件事情就是在head标签里指定viewport meta 属性。
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+    
 &emsp;&emsp;以上代码指定视口宽度等于设备宽度，初始缩放比例为 1 倍，也就是不缩放。
 
 &emsp;&emsp;简单说来在手机（iPhone Safari）上访问网页时它默认会对网页进行缩放 ，尽可能多地在屏幕上展示整个页面的内容。而缩放之后的效果可想而知，一个在电脑上正常展示的页面被缩放进手机屏幕（通常是240*320）里面后，很难阅读，所以我们设定页面不会自动缩放。须记住：如果你的网站不是响应式的，请不要使用initial-scale或者user-scalable=no.
@@ -31,10 +31,9 @@ fullview: false
          
  例如：
 
-
   ![图1](http://i.imgur.com/bE2cEb8.png)
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
 
-  
   ![图2](http://i.imgur.com/SCBZw2T.png)
   
     .our-team {
