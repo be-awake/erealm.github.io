@@ -15,7 +15,7 @@ fullview: false
  &emsp;&emsp;- 简单语法检查   
 &emsp;&emsp;**npm**是 **Node.js** 的包管理工具，而**Grunt**和**grunt插件** 是基于**npm** 安装并管理的。Grunt 0.4.x 版本必须配合Node.js 0.8.0以上的版本使用。
 
-##一、	安装CLI
+##一、安装CLI
 &emsp;&emsp;因为 **grunt** 是基于 **Node.js** 的，所以我们需要安装 **Node.js** 环境，在 **WebStorm** 的 **Terminal** 命令行中运行 **npm install -g grunt-cli** 将 **Grunt** 命令行安装到全局环境中。此时， **Grunt** 命令就被加入到系统路径中了，以后就可以在任何目录下执行此命令了。
 
 &emsp;&emsp; **Grunt CLI** 的任务是调用与 **Gruntfile** 在同一目录中 **Grunt**,所以安装了 **grunt-cli** 并不等于安装了 **Grunt** 。网站中运行 **grunt** 时它会利用 **node** 提供的 **require()** 系统查找本地安装的 **Grunt**。所以可以在项目的任意子目录中运行grunt。如果找到本地安装的 **Grunt**， **CLI** 就将其加载，并传递 **Gruntfile** 中的配置信息，然后执行所指定的任务。图为网站中 **Gruntfile.js** 文件。   
@@ -110,7 +110,7 @@ fullview: false
 **Dependencies**：依赖是给一组包名指定版本范围的一个hash，这个版本范围是一个由一个或多个空格分隔的字符串；    
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
-##二、安装Grunt 和 grunt插件
+###2.安装Grunt插件
 &emsp;&emsp;通过 **npm install <module> --save-dev** 命令向已经存在的 **package.json** 文件 中添加 **Grunt**和 **grunt插件**。此命令不光安装了**module**，还会自动将其添加到 **devDependencies** 配置段中。所以网站中，运用下面这条命令将 **Grunt** 最新版本到项目目录中，并将其添加到 **devDependencies** 内：    
 **npm install grunt --save-dev**
 &emsp;&emsp;同样， **grunt插件** 和其它 **node模块** 都可以按相同的方式安装。然后在根目录下执行 **npm install** 将相关的文件下载下来：
@@ -118,11 +118,11 @@ fullview: false
 ![图 2][2] 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **图 2**
        
-##三、 Gruntfile.js 文件   
-###1.Gruntfile.js文件位置及作用
+###3.Gruntfile.js 文件   
+(1)**Gruntfile.js**文件位置及作用
 &emsp;&emsp; **Gruntfile.js** 文件是有效的 **JavaScript** 文件，放在项网站目根目录中，和 **package.json** 文件在同一目录层级，并和项目源码一起加入源码管理器。 **Gruntfile.js** 文件用于读取 **package** 信息、插件加载、注册任务和运行任务。
-###2.Gruntfile由以下几部分构成：      
-（1）**"wrapper"** 函数   
+(2)**Gruntfile.js**由以下几部分构成：      
+a.**"wrapper"** 函数   
 &emsp;&emsp;网站 **Gruntfile** 文件的 **wrapper** 部分的函数如下:
 
     module.exports = function(grunt){
@@ -145,7 +145,7 @@ fullview: false
 &emsp;&emsp;每一份**Gruntfile** 和 **grunt插件**都遵循同样的格式，所有的Grunt代码必须放在此函数内。   
 &emsp;&emsp;项目的元数据是从 **package.json** 文件中导入到 **Grunt配置** 中的， **grunt.file.readJSON** 方法用于引入 **JSON** 数据。 **grunt-contrib-uglify** 插件中的 **uglify** 任务被配置用于压缩一个源文件以及使用该元数据动态的生成一个 **banner** 注释。见以上代码。   
 
-（2）项目与任务配置   
+b.项目与任务配置   
 &emsp;&emsp;如以上 **wrapper** 函数， **Grunt** 任务都依赖某些配置数据，这些数据被定义在一个 **object** 内，并传递给 **grunt.initConfig** 方法。 **grunt.file.readJSON('package.json')** 将存储在 **package.json** 文件中的 **JSON** 元数据引入到 **grunt config** 中。由于 **Gruntfile.js** 是 **javascript** 文件，所以配置信息不只是 **JSON** 格式，这里也可以使用有效的js代码。   
 &emsp;&emsp;以下为 **package.json** 文件中的 **grunt-contrib-uglify** 插件中的 **uglify** 任务要求它的配置被指定在一个同名属性中。网站使用 **uglify** 任务的 **build** 的目标，用于将多个public目录下的js文件压缩为一个目标文件，即 **libs.min.js** 和 **app.min.js** 文件。
 
@@ -214,7 +214,7 @@ fullview: false
 
 &emsp;&emsp;在一个任务配置中， **options** 属性可以用来指定覆盖内置属性的默认值。每一个目标中还可以拥有一个专门针对此目标的 **options** 属性。目标级的 **options** 将会覆盖任务级的 **options**。
       
-（3）加载**grunt**插件和任务   
+c.加载**grunt**插件和任务   
 &emsp;&emsp;像 **grunt-contrib-uglify 、grunt-contrib-copy** 等这些常用 **grunt插件** 被加载了进来。只要在 **package.json** 文件中被列为依赖的包，并通过 **npm install** 安装之后，都可以在 **Gruntfile** 中以简单命令的形式使用。如：
 
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -237,7 +237,7 @@ fullview: false
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-usemin');   
 
-（4）网站中常用**grunt**插件功能介绍   
+d.网站中常用**grunt**插件功能介绍   
 以下为网站中加载的**grunt**插件功能简述：   
 **grunt-contrib-copy**：用于复制文件或目录，复制src中的文件；   
 **grunt-contrib-imagemin**：优化并压缩网页图片；   
@@ -254,7 +254,7 @@ fullview: false
 **grunt-autoprefixer**：解析CSS文件并且添加浏览器前缀到CSS规则里；   
 **grunt-nodemon**：用于实时监听app.js文件，实现运行grunt后自动启动浏览器以3000端口打开网页； 
   
-（5）自定义任务   
+e.自定义任务   
 &emsp;&emsp;代码中通过定义 **default** 任务，可以让 **Grunt** 默认执行一个或多个任务。在网站中，执行 **grunt** 命令时如果不指定一个任务的话，将会执行 **lesslint,jshint,less:debug, concurrent，autoprefixer:debug** 任务。这和执行 **grunt task**或者 **grunt default** 的效果一样。 **default** 任务列表数组中可以指定任意数目的任务（可以带参数）。
 
     grunt.option('force', true);
@@ -265,7 +265,7 @@ fullview: false
     grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile','uglify',
     'filerev','usemin', 'copy:build', 'clean:build']);
 
-###3.文件格式
+###4.文件格式
 &emsp;&emsp;由于大多的任务都是执行文件操作， **Grunt** 有一个强大的抽象层用于声明任务应该操作哪些文件。 **src-dest(源文件-目标文件)** 文件映射的方式有：   
  &emsp;&emsp;- 简洁格式   
  &emsp;&emsp;- 文件对象格式   
@@ -303,8 +303,9 @@ fullview: false
             }...
 
 &emsp;&emsp;这里让 **copy** 任务将所有存在于src/目录下的文件合并起来，然后存储在dist目录中，并以项目名来命名。
-###4.相关插件功能配置
-&emsp;&emsp;当所有需要的 **grunt** 插件加载进来后：   
+
+##三、相关插件功能配置     
+&emsp;&emsp;当所有需要的 **grunt** 插件加载进来后：     
 （1）**JSHint**  
 &emsp;&emsp; **JSHint** 是Javascript代码验证工具，这种工具可以检查代码并提供相关的代码改进意见。 **JSHint** 只需要一个需要检测的文件数组，然后是一个 **options** 对象，这个对象用于重写 **JSHint** 提供的默认检测规则。如以下代码， **options** 对象中修改了 **JSHint** 默认检测规则，分别使用 **.jshintrc-client** 和 **.jshintrc-sever** 插件，检测public/javascript/目录、config/目录和app/目录下的所有 **.js** 文件并忽略掉该目录下所有 **.min.js** 文件。
 
@@ -333,7 +334,7 @@ fullview: false
                 ]
             }
 
-（2）**watch**  
+（2）**watch**     
 &emsp;&emsp;当它检测到任何 **files** 里的文件发生变化时，它就会按照顺序执行 **tasks** 里相应的任务,即刷新。
 
     watch: {
@@ -358,9 +359,9 @@ fullview: false
                 options: {
                     livereload: true
                 }
-            }...
+            }...  
 
-（3）**copy**    
+（3）**copy**      
 &emsp;&emsp; **copy** 任务将public/vendor/jQuery/dist目录下的文件复制到public/javascripts/libs中。
 
     copy: {
@@ -373,8 +374,8 @@ fullview: false
                     {
                         expand: true, cwd: 'public/vendor/angular',
                         src: ['angular.min.js.map','angular.min.js'], dest: "public/javascripts/libs"
-                    }...
-（4）**imagemin**   
+                    }...  
+（4）**imagemin**     
 &emsp;&emsp; **imagemin** 任务将public/images目录下的所有 **.png、.jpg、.gif** 格式图片优化压缩到public/images-buidl/目录下。
 
     imagemin: {
@@ -386,9 +387,9 @@ fullview: false
                     dest: 'public/images-build/'
                 }]
             }
-        },
+        }
 
-（5）**less**   
+（5）**less**        
 &emsp;&emsp; **less** 任务将 **app.css** 文件解析为 **app.less** 文件。
 
     less: {
@@ -408,7 +409,7 @@ fullview: false
                     'public/stylesheets/app.min.css': 'public/stylesheets/app.less'
                 }
             }
-        },
+        }   
 
 &emsp;&emsp;总之 **Grunt** 就是为了自动化。对于前端为了明确模块，我们可以会将 **JavaScript、CSS** 等代码拆解成很多个模块，他们都有独立的一个个文件，但是会导致整个项目文件太多，不利于页面优化。通过 **Grunt** 工具我们将这些文件压缩合并起来，这样我们就能免去很多手动操作，既保证效率又保证质量，高效完成任务。以上只是通过本网站个人初涉 **Grunt** 的一个心得，如有错误欢迎指出。
 
