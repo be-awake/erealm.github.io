@@ -116,7 +116,7 @@ fullview: false
     
     npm install grunt --save-dev   
     
-&emsp;&emsp;同样，**grunt**插件和其它**node**模块都可以按相同的方式安装。然后在根目录下执行npm install将相关的文件下载下来：   
+&emsp;&emsp;同样，**grunt**插件和其它**node**模块都可以按相同的方式安装。然后在根目录下执行**npm install**将相关的文件下载下来：   
 
  ![图2](http://i.imgur.com/9SwSc7U.png%22%E5%9B%BE2%22)   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **图 2**
