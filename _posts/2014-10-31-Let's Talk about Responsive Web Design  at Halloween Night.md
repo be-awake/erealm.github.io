@@ -1,12 +1,10 @@
-# 浅谈响应式设计
-
+---
 layout: post
 title: 浅谈响应式设计!
 author: emma
 categories: [home]
 tags: [web, 开源, 响应式设计，responsive design,web front-end,web 前端]
 fullview: false
-
 ---
   &emsp;&emsp;Hello，今天是2014年10月31日，传说中的万圣节，于是想happy的谈一下这段时间对响应式设计的学习和理解。欢乐码字中。。。。。
 
