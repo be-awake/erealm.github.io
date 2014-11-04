@@ -23,8 +23,8 @@ fullview: false
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
          
 ##二、安装Grunt
-&emsp;&emsp;首先如图1需要在项目中添加两份文件：**package.json** 和 **Gruntfile.js**。          
-###1.**package.json** 文件   
+&emsp;&emsp;首先如图1需要在项目中添加两份文件：**package.json** 和 **Gruntfile.js**。      
+###1.package.json 文件   
 (1) **package.json** 文件作用   
 &emsp;&emsp;**package.json** 文件被 **npm** 用于存储项目的元数据，以便将网站发布为 **npm** 模块。这个文件用来存储 **npm** 模块的依赖项。文件中列出了项目依赖的 **grunt** 和 **Grunt** 插件，放置于 **devDependencies** 配置段内。下面为网站中 **Grunt** 和 **grunt插件** 配置信息：
 
@@ -110,7 +110,7 @@ fullview: false
 **Dependencies**：依赖是给一组包名指定版本范围的一个hash，这个版本范围是一个由一个或多个空格分隔的字符串；    
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
-###2.安装Grunt插件
+###2.Grunt插件安装
 &emsp;&emsp;通过 **npm install <module> --save-dev** 命令向已经存在的 **package.json** 文件 中添加 **Grunt**和 **grunt插件**。此命令不光安装了**module**，还会自动将其添加到 **devDependencies** 配置段中。所以网站中，运用下面这条命令将 **Grunt** 最新版本到项目目录中，并将其添加到 **devDependencies** 内：    
 **npm install grunt --save-dev**
 &emsp;&emsp;同样， **grunt插件** 和其它 **node模块** 都可以按相同的方式安装。然后在根目录下执行 **npm install** 将相关的文件下载下来：
