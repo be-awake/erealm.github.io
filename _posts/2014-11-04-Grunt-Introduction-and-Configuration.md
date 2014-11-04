@@ -19,7 +19,7 @@ fullview: false
 &emsp;&emsp;因为 **grunt** 是基于 **Node.js** 的，所以我们需要安装 **Node.js** 环境，在 **WebStorm** 的 **Terminal** 命令行中运行 **npm install -g grunt-cli** 将 **Grunt** 命令行安装到全局环境中。此时， **Grunt** 命令就被加入到系统路径中了，以后就可以在任何目录下执行此命令了。
 
 &emsp;&emsp; **Grunt CLI** 的任务是调用与 **Gruntfile** 在同一目录中 **Grunt**,所以安装了 **grunt-cli** 并不等于安装了 **Grunt** 。网站中运行 **grunt** 时它会利用 **node** 提供的 **require()** 系统查找本地安装的 **Grunt**。所以可以在项目的任意子目录中运行grunt。如果找到本地安装的 **Grunt**， **CLI** 就将其加载，并传递 **Gruntfile** 中的配置信息，然后执行所指定的任务。图为网站中 **Gruntfile.js** 文件。   
- ![图 1][1]   
+ ![图 1](http://i.imgur.com/giy5QsM.jpg%22%E5%9B%BE1%22)   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
          
 ##二、安装Grunt
@@ -112,10 +112,10 @@ fullview: false
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
 ###2.Grunt插件安装
-&emsp;&emsp;通过**npm install <module> --save-dev**命令向已经存在的**package.json**文件中添加**grunt插件**。此命令不光安装了**module**，还会自动将其添加到**devDependencies**配置段中。所以网站中，运用下面这条命令将**Grunt**最新版本到项目目录中，并将其添加到**devDependencies**内：      
+&emsp;&emsp;通过 **npm install <module> --save-dev** 命令向已经存在的 **package.json** 文件中添加 **grunt插件** 。此命令不光安装了 **module** ，还会自动将其添加到 **devDependencies** 配置段中。所以网站中，运用下面这条命令将 **Grunt** 最新版本到项目目录中，并将其添加到 **devDependencies** 内：      
 **npm install grunt --save-dev**
-&emsp;&emsp;同样，**grunt插件**和其它**node模块**都可以按相同的方式安装。然后在根目录下执行**npm install**将相关的文件下载下来，会多出以下文件：
- ![图 2][2]   
+&emsp;&emsp;同样， **grunt插件** 和其它 **node模块** 都可以按相同的方式安装。然后在根目录下执行 **npm install** 将相关的文件下载下来，会多出以下文件：
+ ![图 2](http://i.imgur.com/9SwSc7U.png%22%E5%9B%BE2%22)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 2**
        
 ###3.Gruntfile.js 文件   
@@ -420,6 +420,3 @@ e.自定义任务
 
     
 
-
-  [1]: http://i.imgur.com/giy5QsM.jpg%22%E5%9B%BE1%22
-  [2]: http://i.imgur.com/9SwSc7U.png%22%E5%9B%BE2%22
