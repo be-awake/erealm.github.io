@@ -30,11 +30,16 @@ fullview: false
          继承主样式表的设定，并专门针对某些布局结构进行样式覆写。
          
  例如：
+ 
+ 
+ 
+ ![图1](http://i.imgur.com/bE2cEb8.png)
+  
 
-  ![图1](http://i.imgur.com/bE2cEb8.png)
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
-  ![图2](http://i.imgur.com/SCBZw2T.png)
+ ![图2](http://i.imgur.com/SCBZw2T.png)
+
+  
   
     .our-team {
        padding: 1.18em 0;
@@ -94,8 +99,9 @@ fullview: false
 	    display:none;
 
 &emsp;&emsp;这行样式代码在响应式设计中很重要，它用于隐藏某块内容。
+
 ![图3](http://i.imgur.com/AWcZfns.png)
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
 
 ![图4](http://i.imgur.com/rjKmy8Q.png)
 
