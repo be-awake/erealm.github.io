@@ -113,6 +113,7 @@ fullview: false
 
 ##二、安装Ggrunt插件
 &emsp;&emsp;通过npm install <module> --save-dev命令向已经存在的package.json文件中添加Grunt和grunt插件。此命令不光安装了 module ，还会自动将其添加到devDependencies配置段中。所以网站中，运用下面这条命令将安装Grunt最新版本到项目目录中，并将其添加到 devDependencies内：
+    
     npm install grunt --save-dev   
 &emsp;&emsp;同样，grunt插件和其它node模块都可以按相同的方式安装。然后在根目录下执行npm install将相关的文件下载下来：   
 
