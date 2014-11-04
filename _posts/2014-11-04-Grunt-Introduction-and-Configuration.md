@@ -23,7 +23,7 @@ fullview: false
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
          
 ##二、安装Grunt
-&emsp;&emsp;首先如图1需要在项目中添加两份文件：**package.json** 和 **Gruntfile.js**。   
+&emsp;&emsp;首先如图1需要在项目中添加两份文件：**package.json** 和 **Gruntfile.js**。          
 ###1.**package.json** 文件   
 (1) **package.json** 文件作用   
 &emsp;&emsp;**package.json** 文件被 **npm** 用于存储项目的元数据，以便将网站发布为 **npm** 模块。这个文件用来存储 **npm** 模块的依赖项。文件中列出了项目依赖的 **grunt** 和 **Grunt** 插件，放置于 **devDependencies** 配置段内。下面为网站中 **Grunt** 和 **grunt插件** 配置信息：
@@ -52,11 +52,11 @@ fullview: false
 
 项目创建 **package.json** 文件的方式一般有如下三种：
 
- &emsp;&emsp;1. grunt-init 模版都会自动创建特定于项目的 **package.json**文件；
+ &emsp;&emsp;a. grunt-init 模版都会自动创建特定于项目的 **package.json**文件；
 
- &emsp;&emsp;2. npm init命令会创建一个基本的 **package.json** 文件；
+ &emsp;&emsp;b. npm init命令会创建一个基本的 **package.json** 文件；
 
- &emsp;&emsp;3. 复制下面的案例，并根据需要做扩充：
+ &emsp;&emsp;c. 复制下面的案例，并根据需要做扩充：
 
         {
           "name": "my-project-name",
@@ -111,11 +111,11 @@ fullview: false
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
 ##二、安装Grunt 和 grunt插件
-&emsp;&emsp;通过**npm install <module> --save-dev**命令向已经存在的**package.json**文件中添加**Grunt**和**grunt插件**。此命令不光安装了**module**，还会自动将其添加到**devDependencies**配置段中。所以网站中，运用下面这条命令将安装**Grunt**最新版本到项目目录中，并将其添加到**devDependencies**内：   
-**npm install grunt --save-dev**       
-&emsp;&emsp;同样，**grunt插件**和其它**node模块**都可以按相同的方式安装。然后在根目录下执行**npm install**将相关的文件下载下来：
-会多出以下文件：   
-![图2][2]   
+&emsp;&emsp;通过 **npm install <module> --save-dev** 命令向已经存在的 **package.json** 文件 中添加 **Grunt**和 **grunt插件**。此命令不光安装了**module**，还会自动将其添加到 **devDependencies** 配置段中。所以网站中，运用下面这条命令将 **Grunt** 最新版本到项目目录中，并将其添加到 **devDependencies** 内：    
+**npm install grunt --save-dev**
+&emsp;&emsp;同样， **grunt插件** 和其它 **node模块** 都可以按相同的方式安装。然后在根目录下执行 **npm install** 将相关的文件下载下来：
+会多出以下文件：
+![图 2][2] 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **图 2**
        
 ##三、 Gruntfile.js 文件   
