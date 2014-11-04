@@ -8,6 +8,7 @@ fullview: false
 ---
 
 &emsp;&emsp;Node.js 是一个快速构建网络服务及应用的平台，它采用异步式 I/O 与事件驱动的架构设计解决传统系统开发中面临的高并发问题，而理解Node.中的事件有助于利用Nodejs构建高效的系统。
+
 ## 一、Node.js事件
 
 &emsp;&emsp;Node.js里面的许多对象都会分发事件，比如一个net.Server对象会在每次有新连接时分发一个事件， 一个fs.readStream对象会在文件被打开的时候发出一个事件。所有这些产生事件的对象都是 **events.EventEmitter** 的实例。**Event模块**是一个简单的事件监听器模式的实现，在nodeJs中可以通过require('events')引入该模块。该模块包含EventEmitter类, 提供事件绑定、触发等相关方法，Node.js的大部分模块都继承自Event模块。
