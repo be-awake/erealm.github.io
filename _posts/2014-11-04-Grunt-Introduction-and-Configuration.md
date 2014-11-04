@@ -111,14 +111,14 @@ fullview: false
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
 ##二、安装Grunt 和 grunt插件
-&emsp;&emsp;通过 **npm install <module> --save-dev** 命令向已经存在的 **package.json**  文件中添加 **Grunt** 和 **grunt插件**。此命令不光安装了 **module** ，还会自动将其添加到 **devDependencies** 配置段中。所以网站中，运用下面这条命令将安装 **Grunt** 最新版本到项目目录中，并将其添加到 **devDependencies** 内：
- **npm install grunt --save-dev**   
-&emsp;&emsp;同样， **grunt插件** 和其它 **node模块** 都可以按相同的方式安装。然后在根目录下执行 **npm install** 将相关的文件下载下来：
+&emsp;&emsp;通过**npm install <module> --save-dev**命令向已经存在的**package.json**文件中添加**Grunt**和**grunt插件**。此命令不光安装了**module**，还会自动将其添加到**devDependencies**配置段中。所以网站中，运用下面这条命令将安装**Grunt**最新版本到项目目录中，并将其添加到**devDependencies**内：   
+**npm install grunt --save-dev**       
+&emsp;&emsp;同样，**grunt插件**和其它**node模块**都可以按相同的方式安装。然后在根目录下执行**npm install**将相关的文件下载下来：
 会多出以下文件：   
 ![图2][2]   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **图 2**
        
-##三、 Gruntfile.js 文件
+##三、 Gruntfile.js 文件   
 ###1.Gruntfile.js文件位置及作用
 &emsp;&emsp; **Gruntfile.js** 文件是有效的 **JavaScript** 文件，放在项网站目根目录中，和 **package.json** 文件在同一目录层级，并和项目源码一起加入源码管理器。 **Gruntfile.js** 文件用于读取 **package** 信息、插件加载、注册任务和运行任务。
 ###2.Gruntfile由以下几部分构成：      
