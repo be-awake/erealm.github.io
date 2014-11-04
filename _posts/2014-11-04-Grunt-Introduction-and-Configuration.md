@@ -111,7 +111,7 @@ fullview: false
 **Dependencies**：依赖是给一组包名指定版本范围的一个hash，这个版本范围是一个由一个或多个空格分隔的字符串；    
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
-##二、安装Ggrunt插件
+###2.安装grunt插件
 &emsp;&emsp;通过以下命令向已经存在的**package.json**文件中添加**Grunt和grunt**插件。此命令不光安装了**module**，还会自动将其添加到**devDependencies**配置段中。   
    
     npm install <module> --save-dev    
