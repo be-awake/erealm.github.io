@@ -25,7 +25,7 @@ fullview: false
 ##二、安装Grunt
 &emsp;&emsp;首先如图1需要在项目中添加两份文件：**package.json** 和 **Gruntfile.js**。 
      
-###1.package.json 文件###   
+###1.package.json 文件   
 (1) **package.json** 文件作用   
 &emsp;&emsp;**package.json** 文件被 **npm** 用于存储项目的元数据，以便将网站发布为 **npm** 模块。这个文件用来存储 **npm** 模块的依赖项。文件中列出了项目依赖的 **grunt** 和 **Grunt** 插件，放置于 **devDependencies** 配置段内。下面为网站中 **Grunt** 和 **grunt插件** 配置信息：
 
@@ -267,8 +267,8 @@ e.自定义任务
     'filerev','usemin', 'copy:build', 'clean:build']);
 
 ###4.文件格式
-&emsp;&emsp;由于大多的任务都是执行文件操作， **Grunt** 有一个强大的抽象层用于声明任务应该操作哪些文件。
- **src-dest(源文件-目标文件)** 文件映射的方式有：   
+&emsp;&emsp;由于大多的任务都是执行文件操作， **Grunt** 有一个强大的抽象层用于声明任务应该操作哪些文件。    
+**src-dest(源文件-目标文件)** 文件映射的方式有：   
  &emsp;&emsp;- 简洁格式   
  &emsp;&emsp;- 文件对象格式   
  &emsp;&emsp;- 文件数组格式等格式   
@@ -376,7 +376,8 @@ e.自定义任务
                     {
                         expand: true, cwd: 'public/vendor/angular',
                         src: ['angular.min.js.map','angular.min.js'], dest: "public/javascripts/libs"
-                    }...  
+                    }...
+                    
 （4）**imagemin**     
 &emsp;&emsp; **imagemin** 任务将public/images目录下的所有 **.png、.jpg、.gif** 格式图片优化压缩到public/images-buidl/目录下。
 
