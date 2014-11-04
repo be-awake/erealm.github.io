@@ -115,9 +115,10 @@ fullview: false
 **devDependencies**：别人在程序中下载并使用我们的模块时，不用去下载并构建网站使用的外部测试或者文档框架；    
 
 ##二、安装Ggrunt插件
-&emsp;&emsp;通过 **npm install <module> --save-dev** 命令向已经存在的 **package.json**  文件中添加 **Grunt** 和 **grunt插件**。此命令不光安装了 **module** ，还会自动将其添加到 **devDependencies**  配置段中。所以网站中，运用下面这条命令将安装 **Grunt** 最新版本到项目目录中，并将其添加到 **devDependencies** 内：
+&emsp;&emsp;通过 **npm install <module> --save-dev**命令向已经存在的 **package.json**文件中添加 **Grunt**和 **grunt插件**。此命令不光安装了 **module**，还会自动将其添加到 **devDependencies**配置段中。所以网站中，运用下面这条命令将安装 **Grunt**最新版本到项目目录中，并将其添加到 **devDependencies**内：
  **npm install grunt --save-dev**   
-&emsp;&emsp;同样， **grunt插件** 和其它 **node模块** 都可以按相同的方式安装。然后在根目录下执行 **npm install** 将相关的文件下载下来。      
+&emsp;&emsp;同样， **grunt插件**和其它 **node模块**都可以按相同的方式安装。然后在根目录下执行 **npm install**将相关的文件下载下来。    
+
  ![图2](http://i.imgur.com/9SwSc7U.png%22%E5%9B%BE2%22)   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **图 2**
               
