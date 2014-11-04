@@ -14,6 +14,11 @@ fullview: false
 &emsp;&emsp;响应式网页设计最初是由 Ethan Marcotte 提出的一个概念：为什么一定要为每个用户群各自打造一套设计和开发方案？Web设计应该做到根据不同设备环境自动响应及调整。无论用户正在使用笔记本还是iPad，我们的页面都应该能够自动切换分辨率、图片尺寸及相关脚本功能等，以适应不同设备;换句话说，页面应该有能力去自动响应用户的设备环境。这样，我们就可以不必为不断到来的新设备做专门的版本设计和开发了。当然响应式Web设计不仅仅是关于屏幕分辨率自适应以及自动缩放的图片等等，它更像是一种对于设计的全新思维模式；我们应当向下兼容、移动优先。
 
 ##**How** 
+
+![图1](http://i.imgur.com/bE2cEb8.png)
+
+  
+![图2](http://i.imgur.com/SCBZw2T.png)
  
 **（1）**.	响应式设计要做的第一件事情就是在head标签里指定viewport meta 属性。
 
@@ -31,16 +36,10 @@ fullview: false
          
  例如：
  
- 
- 
  ![图1](http://i.imgur.com/bE2cEb8.png)
   
-
-
  ![图2](http://i.imgur.com/SCBZw2T.png)
 
-  
-  
     .our-team {
        padding: 1.18em 0;
 
@@ -101,8 +100,7 @@ fullview: false
 &emsp;&emsp;这行样式代码在响应式设计中很重要，它用于隐藏某块内容。
 
 ![图3](http://i.imgur.com/AWcZfns.png)
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**图 1**
-
+ 
 ![图4](http://i.imgur.com/rjKmy8Q.png)
 
 &emsp;&emsp;可以看到，图3中的中英文切换跟菜单栏在图4中没有显示，这里就是当用手机浏览时，我们把有些不合适的内容隐藏了，图3中的菜单栏没有输出，在图4的右上角重新设计了一个适合手机浏览的菜单显示。
