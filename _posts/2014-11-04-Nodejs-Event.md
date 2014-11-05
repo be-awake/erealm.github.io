@@ -12,7 +12,6 @@ fullview: false
 ## 一、Node.js事件
 
 &emsp;&emsp;Node.js里面的许多对象都会分发事件，比如一个net.Server对象会在每次有新连接时分发一个事件， 一个fs.readStream对象会在文件被打开的时候发出一个事件。所有这些产生事件的对象都是 **events.EventEmitter** 的实例。**Event模块**是一个简单的事件监听器模式的实现，在nodeJs中可以通过`require('events')`引入该模块。该模块包含EventEmitter类, 提供事件绑定、触发等相关方法，Node.js的大部分模块都继承自Event模块。
-
 &emsp;&emsp;Node.js与Web前端DOM树事件机制不同之处在于不存在冒泡、捕获等行为, 也没有`preventDefault(), stopPropagation()`等方法。Node.js 在执行的过程中会维护一个事件队列，程序在执行时进入事件循环等待下一个事件到来，每个异步式I/O请求完成后会被推送到事件队列。等到线程进入事件循环以后，才会调用事件队列中的回调函数执行相应的逻辑。
 
 ## 二、EventEmitter
