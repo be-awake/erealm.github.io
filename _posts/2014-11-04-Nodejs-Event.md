@@ -7,7 +7,7 @@ tags: [Node.js,事件,EventEmitter]
 fullview: false
 ---
 
-&emsp;&emsp;Node.js 是一个快速构建网络服务及应用的平台，它采用异步式 I/O 与事件驱动的架构设计解决传统系统开发中面临的高并发问题，而理解Node.js中的事件有助于利用Nodejs构建高效的系统。
+&emsp;&emsp;Node.js 是一个快速构建网络服务及应用的平台，它采用异步式 I/O 与事件驱动的架构设计解决传统系统开发中面临的高并发问题，而理解Node.js中的事件有助于利用Node.js构建高效的系统。
 
 ## 一、Node.js事件
 
