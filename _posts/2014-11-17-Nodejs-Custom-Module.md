@@ -13,7 +13,7 @@ fullview: false
 
 &emsp;&emsp;在Node.js中，模块分为两类：一类是Node.js提供的模块，称为核心模块；另一类是用户编写的模块，称为文件模块。
 
-&emsp;&emsp;核心模块在Node.js源代码编译的时候被编译成二进制文件，可以require(‘模块名’)去获取；其中http、fs、net等都是node.js提供的核心模块。在Node进程启动时，部分核心模块就被直接加载进内存中，所以这部分核心模块引入时，文件定位和编译执行这两个步骤可以省略掉，并且在路径分析中优先判断，所以它的加载速度是最快的。
+&emsp;&emsp;核心模块在Node.js源代码编译的时候被编译成二进制文件，可以require(‘模块名’)去获取；其中http、fs、net等都是node.js提供的核心模块。在Node.js进程启动时，部分核心模块就被直接加载进内存中，所以这部分核心模块引入时，文件定位和编译执行这两个步骤可以省略掉，并且在路径分析中优先判断，所以它的加载速度是最快的。
 
 &emsp;&emsp;文件模块则是在运行时动态加载，需要完整的路径分析、文件定位、编译执行过程，速度比核心模块慢。但是在程序中经过第一次使用require方法加载模块后，Node.js对所加载的原生模块或文件模块都进行了缓存，于是在第二次使用require方法加载同样的模块时，是不会有重复开销的。
 
@@ -39,6 +39,7 @@ fullview: false
 
     exports. functionA = functionA;
     exports. functionB = functionB;
+
 **(2)只将一个对象封装到模块中** ，格式如下：
 
     // car.js
@@ -76,6 +77,7 @@ fullview: false
 * `* .node`是预编译好的插件模块；
 
 Nodejs尝试加载的优先级 js文件 > json文件 > node文件
+
 require方法根据其传入的参数决定模块的查找方式。
 
 * `模块以 '/' 开头`表示使用文件的绝对路径。例如，require('/home/marco/foo.js') 将加载/home/marco/foo.js 文件。
