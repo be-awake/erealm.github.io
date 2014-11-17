@@ -53,7 +53,7 @@ fullview: false
     }
     module.exports= car;   // exports= functionA;
 
-&emsp;&emsp;**module.exports 与exports的区别** ：module.exports是模块的公开接口，每个模块都会自动创建一个module对象，该对象有一个exports属性，初始值是个空对象{}.exports只是module.exports的一个辅助对象，模块最终返回module.exports给模块的调用者，而不是exports.exports所起的作用是收集属性，如果module.exports当前没有任何属性，exports会将这些属性赋给module.exports, 如果module.exports已经有一些属性，那么exports的所有属性会被忽略。
+&emsp;&emsp;**module.exports 与exports的区别** ：module.exports是模块的公开接口，每个模块都会自动创建一个module对象，该对象有一个exports属性，初始值是个空对象{}.exports只是module.exports的一个辅助对象，模块最终返回module.exports给模块的调用者，而不是exports。exports所起的作用是收集属性，如果module.exports当前没有任何属性，exports会将这些属性赋给module.exports, 如果module.exports已经有一些属性，那么exports的所有属性会被忽略。
 
 
 ## 三、使用模块
