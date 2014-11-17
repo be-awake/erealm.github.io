@@ -20,7 +20,7 @@ fullview: false
 ## 二、自定义模块
 
 &emsp;&emsp;在Node.js 应用程序中，文件和模块是一一对应的。一个 Node.js 文件就是一个模块，这个文件可能是JavaScript 代码、JSON 或者编译过的C/C++ 扩展。
-在一个模块中，module.export是模块的公开接口，便于使用require 从外部获取模块的接口。
+在每个模块中，module.export是模块的公开接口，便于使用require 从外部获取模块的接口。
 
 
 **(1)一个模块中包含多个函数** 时，模块的定义如下
