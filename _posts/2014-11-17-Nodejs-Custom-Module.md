@@ -81,5 +81,5 @@ Nodejs尝试加载的优先级 js文件 > json文件 > node文件
 require方法根据其传入的参数决定模块的查找方式。
 
 * `模块以 '/' 开头`表示使用文件的绝对路径。例如，require('/home/marco/foo.js') 将加载/home/marco/foo.js 文件。
-* `模块以 './' 开头`表示调用 require() 时使用相对路径。也就是说，为了保证 require('./circle') 能找到，circle.js 必须和 foo.js 在同一目录。
+* `模块以 './' 开头`表示调用 require() 时使用相对路径。也就是说，为了保证 require('./circle') 能找到，circle.js 必须和 引用模块的js文件在同一目录。
 * `模块不以 '/' 或'./' 开头`表示该模块可以是一个“核心模块”，也可是一个从 node_modules 文件夹中加载的模块。
